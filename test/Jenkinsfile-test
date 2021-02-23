@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Docker compose') {
+            steps {
+                script {
+                    try {
+                        sh 'docker-compose up'
+                    }
+                } catch (Exception e) {
+                        throw e
+                }
+            }
+        }
+    }
+}

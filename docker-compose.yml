@@ -5,3 +5,6 @@ services:
     container_name: jenkinstestcont
     hostname: jenkinstesthost
     image: jenkinstest
+  apache:
+    image: httpd:latest
+    container_name: apache2
